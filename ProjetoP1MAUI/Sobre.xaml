@@ -6,19 +6,19 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="10">
-            <Label Text="SOBRE" FontSize="24" FontAttributes="Bold" />
 
-            <Label Text="Aplicativo: Sistema Acadêmico" />
-            <Label Text="Descrição: cadastro de períodos, cursos e disciplinas." />
-            <Label Text="Versão: 1.0" />
+            <Image Source="info.png" MaximumHeightRequest="40" MaximumWidthRequest="40" Aspect="AspectFit"/>
+            
+            <Label Text="Aplicativo: Sistema Acadêmico" FontSize="24" FontAttributes="Bold" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
 
-            <Label Text="Aluno: Gabriel Almeida" />
-            <Label Text="RA: 2507252"/>
-            <Label Text="Aluno: Gabriel Almeida" />
-            <Label Text="Curso: Análise e Desenvolvimento de Sistemas" />
-            <Label Text="Disciplina: Computação para Dispositivos Móveis" />
-            <Label Text="Professor: Marçal" />
-            <Label Text="Tecnologia: .NET MAUI" />
+            <Label Text="Aluno: Gabriel Santos" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+            
+            <Label Text="RA: 2507252" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+            
+            <Label Text="Data da Avaliação: 30/09/2026" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                   BackgroundColor="DarkBlue"/>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoP1MAUI.DisciplinasPage"
+             Title=":: DISCIPLINAS ::">
+
+    <Grid Padding="10" RowSpacing="10" RowDefinitions="Auto,Auto,*,Auto">
+
+        <Grid Grid.Row="0" ColumnDefinitions="*,Auto" ColumnSpacing="10">
+            <Entry x:Name="entPesquisa" Placeholder="Pesquisar pelo nome" Grid.Column="0" />
+            <Button Text="Pesquisar" Grid.Column="1" Clicked="btnPesquisarOnClick" />
+        </Grid>
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,*,150" ColumnSpacing="10">
+            <Label Text="Nome" FontAttributes="Bold" Grid.Column="0" />
+            <Label Text="Curso" FontAttributes="Bold" Grid.Column="1" />
+            <Label Text="Ação" FontAttributes="Bold" Grid.Column="2" />
+        </Grid>
+
+        <CollectionView x:Name="cvDisciplinas" Grid.Row="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,150" ColumnSpacing="10" Padding="0,5">
+                        <Label Text="{Binding DisNome}" Grid.Column="0" VerticalOptions="Center" />
+                        <Label Text="{Binding CurNome}" Grid.Column="1" VerticalOptions="Center" />
+                        <HorizontalStackLayout Grid.Column="2" Spacing="5">
+                            <Button Text="Alterar" FontSize="12" Padding="5,0" HeightRequest="35"
+                                    Clicked="btnAlterarOnClick" />
+                            <Button Text="Remover" FontSize="12" Padding="5,0" HeightRequest="35"
+                                    Clicked="btnRemoverOnClick" />
+                        </HorizontalStackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Inserir" Grid.Row="3" Clicked="btnInserirOnClick" />
+    </Grid>
+</ContentPage>

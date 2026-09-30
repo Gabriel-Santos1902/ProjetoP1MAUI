@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProjetoP1MAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProjetoP1MAUI"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="True"
+    Title="SISTEMA ACADÊMICO">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout Padding="10">
+            <Image Source="sistema_academicov2.png" WidthRequest="100" />
+            <Label Text="SISTEMA ACADÊMICO" HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Label Text="Copyright @Gabriel Almeida" HorizontalTextAlignment="Center" Padding="10" />
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Title="Menu Principal" FlyoutDisplayOptions="AsMultipleItems">
+        
+        <Tab Title="HOME" Icon="home.png" FlyoutIcon="homev3.png">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+
+        <Tab Title="PERÍODOS" Icon="calendar_month.png" FlyoutIcon="periodosv3.png">
+            <ShellContent
+                Title="Períodos"
+                ContentTemplate="{DataTemplate local:PeriodosPage}"
+                Route="PeriodosPage" />
+        </Tab>
+
+        <Tab Title="CURSOS" Icon="school.png" FlyoutIcon="cursosv3.png">
+            <ShellContent
+                Title="Cursos"
+                ContentTemplate="{DataTemplate local:CursosPage}"
+                Route="CursosPage" />
+        </Tab>
+
+        <Tab Title="DISCIPLINAS" Icon="menu_book.png" FlyoutIcon="disciplinasv3.png">
+            <ShellContent
+                Title="Disciplinas"
+                ContentTemplate="{DataTemplate local:DisciplinasPage}"
+                Route="DisciplinasPage" />
+        </Tab>
+
+        <Tab Title="SOBRE" Icon="info.png" FlyoutIcon="sobrev3.png">
+            <ShellContent
+                Title="Sobre"
+                ContentTemplate="{DataTemplate local:Sobre}"
+                Route="Sobre" />
+        </Tab>
+
+    </FlyoutItem>
+</Shell>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoP1MAUI.CursosInserir"
+             Title=":: CURSO > INSERIR ::">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Período" />
+            <Picker x:Name="pckPeriodo" Title="Selecione o período" ItemDisplayBinding="{Binding PerNome}" />
+
+            <Label Text="Nome" />
+            <Entry x:Name="entNome" Placeholder="Nome do curso" MaxLength="50" />
+
+            <Label Text="Sigla" />
+            <Entry x:Name="entSigla" Placeholder="Sigla" MaxLength="25" />
+
+            <Label Text="Observações" />
+            <Editor x:Name="edtObservacoes" HeightRequest="100" MaxLength="500" />
+
+            <Button Text="Salvar" Clicked="btnSalvarOnClick" />
+            <Button Text="Voltar" Clicked="btnVoltarOnClick" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
